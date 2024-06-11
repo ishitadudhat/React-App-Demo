@@ -11,8 +11,9 @@ export default function TextForm(props) {
 
     const handleUpChange = () => {
         // console.log("Btn click");
-        let newText = text.toUpperCase();
-        setText(newText);
+        // let newText = text.toUpperCase();
+        // setText(newText);
+        setText(text.toUpperCase());
     }
 
     const handleLoChange = () => {
@@ -43,17 +44,16 @@ export default function TextForm(props) {
     
     
     return (
-        <div >
+        <div>
             <div class="mx-5 my-5">
                 <h1>{props.heading}</h1>
                 <textarea className={`form-control bg-${props.mode === 'light' ? 'light' : 'dark'} text-${props.mode === 'light' ? 'dark' : 'light'}`} id="exampleFormControlTextarea1" rows="8" value={text} onChange={handleOnChange}></textarea>
-                <button className='btn btn-dark my-4' onClick={handleUpChange}>Convert to Upper Case</button>
-                <button className='btn btn-outline-dark my-4 mx-4' onClick={handleLoChange}>Convert to Lower Case</button>
-                <button className='btn btn-dark my-4 mx-4' onClick={handleSpeak}>Speak</button>
-                <button className='btn btn-outline-dark my-4 mx-4' onClick={handleClear}>Clear</button>
-                <button className='btn btn-dark my-4 mx-4' onClick={handleCopy}>Copy</button>
-                <button className='btn btn-outline-dark my-4 mx-4' onClick={handleRemoveSpace}>Remove Extra Space</button>
-
+                <button className={`btn btn-outline-dark my-4 bg-${props.mode === 'light' ? 'dark' : 'light'} text-${props.mode === 'light' ? 'light' : 'dark'}`} onClick={handleUpChange}>Convert to Upper Case</button>
+                <button className={`btn btn-outline-dark my-4 mx-4 bg-${props.mode === 'light' ? 'dark' : 'light'} text-${props.mode === 'light' ? 'light' : 'dark'}`} onClick={handleLoChange}>Convert to Lower Case</button>
+                <button className={`btn btn-outline-dark my-4 bg-${props.mode === 'light' ? 'dark' : 'light'} text-${props.mode === 'light' ? 'light' : 'dark'}`} onClick={handleSpeak}>Speak</button>
+                <button className={`btn btn-outline-dark my-4 mx-4 bg-${props.mode === 'light' ? 'dark' : 'light'} text-${props.mode === 'light' ? 'light' : 'dark'}`} onClick={handleClear}>Clear</button>
+                <button className={`btn btn-outline-dark my-4 bg-${props.mode === 'light' ? 'dark' : 'light'} text-${props.mode === 'light' ? 'light' : 'dark'}`} onClick={handleCopy}>Copy</button>
+                <button className={`btn btn-outline-dark my-4 mx-4 bg-${props.mode === 'light' ? 'dark' : 'light'} text-${props.mode === 'light' ? 'light' : 'dark'}`} onClick={handleRemoveSpace}>Remove Extra Space</button>
             </div>
 
             <div className='container'>

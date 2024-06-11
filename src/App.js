@@ -7,7 +7,9 @@ function App() {
 
   const [mode, setMode] = useState('light');
 
-  const [btnText, newbtntext] = useState('Enable Dark Mode')
+  const [btnText, newbtntext] = useState('Enable Dark Mode');
+
+  
 
   const toggleMode = () => {
     if (mode === 'light') {
