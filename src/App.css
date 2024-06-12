@@ -2,4 +2,176 @@ body{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  
 }
+
+.jumbotron {
+  /* width: 100%; */
+  border-radius: 15px;
+  background-color: #8c2abd; /* Blue background color */
+  color: #ffffff; /* White text color */
+  /* background-image: url('S.png');
+  background-size: cover; */
+  background-position: center;
+}
+
+.about-us-section {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+.about-us-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.about-us-icon {
+  font-size: 48px;
+  color: #8c2abd;
+  margin-bottom: 20px;
+}
+.about-us-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.btn1{
+  /* background-color: #8c2abd; */
+  padding: 8px 13px;
+  font-size: 1rem;
+}
+
+
+
+/* Faculty Member Section */
+
+.faculty-card {
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.faculty-card:hover {
+  transform: translateY(-5px);
+}
+.faculty-img {
+  max-width: 100%;
+  height: auto;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.faculty-details {
+  padding: 20px;
+}
+.faculty-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.faculty-designation {
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+.faculty-qualification {
+  margin-bottom: 10px;
+}
+.faculty-expertise {
+  margin-bottom: 20px;
+}
+.faculty-social-icons {
+  font-size: 24px;
+}
+
+
+
+.card {
+  background-color: #8c2abd; /* Blue background for cards */
+  color: #ffffff; /* White text color */
+  transition: transform 0.2s; /* Smooth transition on hover */
+}
+.card:hover {
+  transform: translateY(-5px); /* Move card slightly upwards on hover */
+}
+.card-title {
+  font-weight: bold;
+}
+.card-text {
+  font-size: 16px;
+}
+.list-group-item {
+  background-color: transparent; /* Transparent background for list items */
+  border-color: #ffffff; /* White border color */
+}
+.list-group-item:first-child {
+  border-top: none; /* Remove top border from first list item */
+}
+
+
+
+/* Student Testimonial section */
+.testimonial-slide {
+  text-align: center;
+  padding: 50px;
+}
+.testimonial-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.testimonial-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+.testimonial-course {
+  font-style: italic;
+  /* color: #6c757d; */
+  margin-bottom: 10px;
+}
+.testimonial-quote {
+  font-size: 18px;
+  /* color: #333333; */
+}
+
+
+
+
+/* Admissions Information */
+.accordion-section {
+  padding: 60px 0;
+}
+.accordion-section h2 {
+  margin-bottom: 30px;
+}
+.card-header button {
+  width: 100%;
+  text-align: left;
+}
+
+
+
+/* Infrastructure and Facilities */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.gallery-item {
+  flex: 1 1 calc(25% - 15px);
+  cursor: pointer;
+}
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Student Activities */
+.club-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+
+
+/* Contact Us */
