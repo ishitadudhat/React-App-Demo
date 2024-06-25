@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import './App.css';
-import Navbar from './components/Navbar.js'
-import TextForm from './components/TextForm.js'
-import Alert from './components/Alert.js';
+import Navbar from './components/Navbar.jsx'
+import TextForm from './components/TextForm.jsx'
+import Alert from './components/Alert.jsx';
+import PrivacyPolicy from './components/PrivacyPolicy.jsx';
+import { createBrowserRouter , RouterProvider} from 'react-router-dom';
+
 
 function App() {
 
@@ -40,7 +43,6 @@ function App() {
     }
   }
 
-
   const showAlert = (message,type) => {
     setAlert({
       msg:message,
@@ -53,14 +55,34 @@ function App() {
 
 
 
+  const router = createBrowserRouter([
+    {
+      path: '/Home',
+      element: <>
+      <Navbar title="SIT" aboutText="Contact Us" mode={mode} toggleMode={toggleMode} btnText={btnText} />
+    <Alert alert={alert} />
+    <TextForm heading="Enter Text to Analyse Below" mode={mode} toggleMode={toggleMode} showAlert={showAlert}/>
+      </>
+    },
+    {
+    path: '/PrivacyPolicy',
+      element: <>
+      <Navbar title="SIT" aboutText="Contact Us" mode={mode} toggleMode={toggleMode} btnText={btnText} />
+      <PrivacyPolicy heading="Privacy Policy for Sahajanand Institute of Technology"/>
+      </>
+      }
+  ])
+
+
+  
+
+  
+
+
   return (
     <>
-    <Alert alert={alert} />
-      <Navbar title="SIT" aboutText="Contact Us" mode={mode} toggleMode={toggleMode} btnText={btnText} />
-
-      <TextForm heading="Enter Text to Analyse Below" mode={mode} toggleMode={toggleMode} showAlert={showAlert}/>
-      
-    </>
+  <RouterProvider router={router}/>
+    </> 
   );
 }
 
